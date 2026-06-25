@@ -1,153 +1,99 @@
-# Theja Reddy — Portfolio Website
+# B Theja Reddy — Portfolio
 
-A modern, cinematic, dark-themed portfolio website built with pure HTML, CSS, and JavaScript — no frameworks, no build tools. Handcrafted for a premium look and feel.
+A premium, AI-themed personal portfolio website.
 
 ---
 
-## 🗂️ Project Structure
+## Folder Structure
 
 ```
 portfolio/
-│
-├── index.html                          ← Main entry point
-│
-├── css/
-│   ├── style.css                       ← Core styles, variables, components
-│   ├── animations.css                  ← Scroll reveal, entrance, transitions
-│   └── responsive.css                  ← Media queries (mobile-first)
-│
-├── js/
-│   ├── main.js                         ← Navbar, scroll, ripple, smoothscroll
-│   ├── animations.js                   ← Typed effect, parallax, counters
-│   └── cursor-effects.js               ← Custom cursor + glow
-│
+├── index.html              ← Main website file
 ├── assets/
+│   ├── css/
+│   │   └── style.css       ← All styles
+│   ├── js/
+│   │   └── script.js       ← All JavaScript
 │   ├── images/
-│   │   ├── profile-placeholder.png     ← ⚠️ Replace with your photo
-│   │   ├── milk-management-placeholder.png
-│   │   └── timesheet-placeholder.png
-│   │
-│   ├── icons/                          ← (add custom icons here)
-│   ├── backgrounds/                    ← (add background assets here)
-│   │
+│   │   └── profile.jpg     ← Add your profile photo here
 │   └── resume/
-│       └── resume.pdf                  ← ⚠️ Add your actual resume here
-│
+│       └── resume.pdf      ← Add your resume PDF here
 └── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## Quick Customization Guide
 
-No build step needed. Just open `index.html` in any browser.
+### 1. Add Profile Picture
+- Place your photo at: `assets/images/profile.jpg`
+- If no image is found, the site shows stylish "BTR" initials automatically
 
-```bash
-# Option 1: Open directly
-open index.html
+### 2. Add Resume
+- Create folder: `assets/resume/`
+- Place resume at: `assets/resume/resume.pdf`
+- The Download Resume button will work automatically
 
-# Option 2: Use VS Code Live Server (recommended for dev)
-# Install "Live Server" extension → right-click index.html → "Open with Live Server"
+### 3. Update Contact Details
+- Open `index.html`
+- Search for `theja@example.com` and replace with your real email
+- Search for `+91 XXXXXXXXXX` and replace with your phone
+- Search for `thejareddy` and replace with your actual GitHub/LinkedIn username
 
-# Option 3: Simple Python server
-python3 -m http.server 8080
-# Then visit: http://localhost:8080
-```
+### 4. Update Social Links
+- GitHub: search `github.com/thejareddy` → replace
+- LinkedIn: search `linkedin.com/in/thejareddy` → replace
 
----
+### 5. Add a New Project
+Find the `<!-- Project Cards Grid -->` section in `index.html`.
+Copy an existing `.project-card` block and update:
+- `pc-icon` — emoji or icon
+- `pc-badge` — type label (AI Powered / Backend / DevOps etc.)
+- `pc-title` — project name
+- `pc-desc` — short description
+- `pc-highlights` list items
+- `pc-tech` badges
+- `pc-link` GitHub href
 
-## 📸 Replacing Placeholder Assets
+### 6. Add a New Experience
+Find the `<!-- Add more experience blocks here -->` comment in the Experience section.
+Copy the `.exp-card` block and update the details.
 
-### Profile Image
-1. Add your photo to `assets/images/`
-2. Rename it to `profile-placeholder.png` (or update the `src` in `index.html`)
-3. Recommended: square image, at least 400×400px
+### 7. Add a New Certification
+Find the `<!-- Add more certifications here -->` comment.
+Copy a `.cert-card` block and update.
 
-### Project Screenshots
-1. Take screenshots of your projects
-2. Replace `milk-management-placeholder.png` and `timesheet-placeholder.png`
-3. Recommended: 800×450px (16:9 ratio)
+### 8. Add a New Education Entry
+Find the `.edu-grid` in the Education section.
+Copy a `.edu-card` block and update.
 
-### Resume
-1. Export your resume as a PDF
-2. Place it at `assets/resume/resume.pdf`
-3. The "View Resume" and "Download CV" buttons will work automatically
-
----
-
-## ✏️ Customization
-
-### Update Personal Info
-Edit `index.html` to change:
-- Name, title, description
-- LinkedIn and GitHub URLs
-- Project descriptions and features
-- Education details
-
-### Change Color Palette
-In `css/style.css`, edit the `:root` variables:
+### 9. Change Colors
+Open `assets/css/style.css` and update the CSS variables at the top of the file:
 ```css
 :root {
-  --accent-primary: #7b6ef6;   /* Main purple */
-  --accent-cyan:    #4ecdc4;   /* Secondary teal */
-  --accent-rose:    #f06292;   /* Accent pink */
+  --accent: #1A6BF0;      /* Primary blue accent */
+  --accent-navy: #0F2B5B; /* Dark navy headings */
+  --accent-teal: #0EA5C2; /* AI/teal accent */
+  /* ...etc */
 }
 ```
 
-### Add More Projects
-Copy a `.project-card` block in `index.html` and update the content.
+---
+
+## Deployment
+
+This is a plain HTML/CSS/JS project — no build step needed.
+
+**Options:**
+- **GitHub Pages**: Push to a GitHub repo, enable Pages in Settings
+- **Netlify**: Drag & drop the folder to netlify.com/drop
+- **Vercel**: Import via vercel.com
+- **Any web host**: Upload files via FTP/cPanel
 
 ---
 
-## 🎨 Design Features
-
-- **Dark futuristic UI** with purple/teal glow aesthetics
-- **Custom cursor** with smooth magnetic lag (desktop only)
-- **Typed text effect** cycling through role descriptions
-- **Scroll-triggered reveal animations** with stagger delays
-- **Animated profile ring** with rotating conic gradient
-- **Glassmorphism cards** with hover glow effects
-- **Floating background orbs** with mouse parallax
-- **Sticky navbar** with scroll-based transparency
-- **Mobile hamburger menu** with full-screen overlay
-- **AI orbital animation** in the Goals section
-- **Loading screen** with animated progress bar
-
----
-
-## 📱 Responsive Breakpoints
-
-| Breakpoint       | Target                     |
-|-----------------|----------------------------|
-| `> 1200px`       | Large desktop              |
-| `992px – 1199px` | Desktop                   |
-| `768px – 991px`  | Tablet landscape           |
-| `576px – 767px`  | Tablet portrait            |
-| `< 576px`        | Mobile phones              |
-| `< 380px`        | Small phones (iPhone SE)   |
-
----
-
-## 🔗 Social Links (Update These)
-
-| Platform | URL |
-|----------|-----|
-| LinkedIn | https://www.linkedin.com/in/theja-reddy/ |
-| GitHub   | https://github.com/thejareddy123 |
-
----
-
-## 🌐 Deployment
-
-Deploy to any static hosting — no backend required:
-
-- **GitHub Pages**: Push to repo → Settings → Pages → Deploy from branch
-- **Vercel**: `vercel --prod` or connect GitHub repo
-- **Netlify**: Drag & drop the `/portfolio` folder at netlify.com
-- **Cloudflare Pages**: Connect repo → builds automatically
-
----
-
-## 📄 License
-
-Personal portfolio — all rights reserved to Theja Reddy.
+## Tech Stack
+- HTML5
+- CSS3 (custom properties, grid, flexbox, animations)
+- Vanilla JavaScript (IntersectionObserver, scroll events)
+- Google Fonts (Space Grotesk, Inter, DM Sans)

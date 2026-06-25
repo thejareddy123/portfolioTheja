@@ -2,372 +2,268 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Theja Reddy — Python Full Stack Developer, AI Enthusiast. Portfolio showcasing real-world projects, freelance work, and technical skills." />
-  <meta name="author" content="Theja Reddy" />
-  <meta property="og:title" content="Theja Reddy — Full Stack Developer" />
-  <meta property="og:description" content="Python Full Stack Developer & AI Enthusiast building real-world applications." />
-  <title>Theja Reddy — Full Stack Developer</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-
-  <style>
-    /* Inline critical: prevent FOUC */
-    body { visibility: hidden; }
-    body.loaded { visibility: visible; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>B Theja Reddy — Python & Backend Developer | AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════════
-       LOADING SCREEN
-  ══════════════════════════════════════════ -->
-  <div id="loading-screen" aria-hidden="true">
-    <div class="loader-name">THeja Reddy</div>
-    <div class="loader-bar-wrap">
-      <div class="loader-bar"></div>
-    </div>
-    <div class="loader-text">initializing portfolio</div>
-  </div>
-
-  <!-- Background Elements -->
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="orb orb-1" aria-hidden="true"></div>
-  <div class="orb orb-2" aria-hidden="true"></div>
-  <div class="orb orb-3" aria-hidden="true"></div>
-
-  <!-- ══════════════════════════════════════════
-       NAVBAR
-  ══════════════════════════════════════════ -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <div class="nav-inner">
-
-        <a href="#hero" class="nav-logo">TR<span></span></a>
-
-        <!-- Desktop Links -->
-        <ul class="nav-links">
-          <li><a href="#about"       data-section="about">About</a></li>
-          <li><a href="#skills"      data-section="skills">Skills</a></li>
-          <li><a href="#projects"    data-section="projects">Projects</a></li>
-          <li><a href="#freelancing" data-section="freelancing">Freelance</a></li>
-          <li><a href="#education"   data-section="education">Education</a></li>
-          <li><a href="#contact"     data-section="contact">Contact</a></li>
-          <!-- Replace resume.pdf with your actual resume later -->
-          <li>
-            <a href="assets/resume/B. Theja Reddy.pdf" target="_blank" rel="noopener"
-               class="btn btn-outline nav-resume-btn">
-              Resume ↗
-            </a>
-          </li>
-        </ul>
-
-        <!-- Hamburger (Mobile) -->
-        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-      </div>
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">BTR<span class="logo-dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#resume" class="nav-link nav-cta">Resume</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#freelancing">Freelance</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#ai-goals">AI Goals</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <!-- Replace resume.pdf with your actual resume later -->
-    <a href="assets/resume/B. Theja Reddy.pdf?v=2" target="_blank" rel="noopener" class="btn btn-primary">
-      View Resume ↗
-    </a>
-  </div>
-
-
-  <!-- ══════════════════════════════════════════
-       HERO SECTION
-  ══════════════════════════════════════════ -->
-  <section id="hero" class="hero">
-    <div class="container">
-      <div class="hero-inner">
-
-        <!-- Left: Content -->
-        <div class="hero-content">
-
-          <h1 class="hero-name">
-            Theja<br/>
-            <span class="highlight">Reddy</span>
-          </h1>
-
-          <!-- Typing Effect -->
-          <div class="hero-typed-wrap">
-            <span id="typed-text"></span>
-            <span class="typed-cursor" aria-hidden="true"></span>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-layer"></div>
+    <div class="hero-grid-layer"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-name">B Theja Reddy</h1>
+        <p class="hero-roles">
+          <span class="role-tag">Python Developer</span>
+          <span class="role-sep">·</span>
+          <span class="role-tag">Backend Developer</span>
+          <span class="role-sep">·</span>
+          <span class="role-tag">Aspiring AI Engineer</span>
+        </p>
+        <p class="hero-intro">
+          Computer Science graduate building real-world Python backends, 
+          Flask &amp; FastAPI services, and AI-powered applications. 
+          Passionate about scalable systems, clean architecture, and modern LLM engineering.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#resume" class="btn btn-secondary">Download Resume</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">Projects Built</span>
           </div>
-
-          <p class="hero-desc">
-            A fresher full-stack developer passionate about building
-            real-world applications — from Flask APIs to responsive
-            frontends And Django. Currently learning AI technologies and working
-            toward scalable, impactful software.
-          </p>
-
-          <!-- CTA Buttons -->
-          <div class="hero-actions">
-            <!-- Replace resume.pdf with your actual resume later -->
-            <a href="assets/resume/B. Theja Reddy.pdf?v=2" target="_blank" rel="noopener"
-               class="btn btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              View Resume
-            </a>
-            <!-- Replace resume.pdf with your actual resume later -->
-            <a href="assets/resume/B. Theja Reddy.pdf?v=2" download="Theja_Reddy_Resume.pdf"
-               class="btn btn-ghost">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Download CV
-            </a>
-            <a href="#projects" class="btn btn-ghost">
-              See My Work →
-            </a>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">8mo</span>
+            <span class="stat-label">Industry Experience</span>
           </div>
-
-          <!-- Social Links -->
-          <div class="hero-socials">
-            <a href="https://www.linkedin.com/in/theja-reddy/" target="_blank"
-               rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-              <!-- LinkedIn SVG -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
-              </svg>
-            </a>
-            <a href="https://github.com/thejareddy123" target="_blank"
-               rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-              <!-- GitHub SVG -->
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-              </svg>
-            </a>
-
-            <div class="social-divider" aria-hidden="true"></div>
-
-            <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--text-muted);">
-              Based in India
-            </span>
-          </div>
-
-        </div><!-- /hero-content -->
-
-        <!-- Right: Profile Image -->
-        <div class="hero-image-wrap">
-          <!-- Replace profile-placeholder.png with your actual profile picture later -->
-          <div class="profile-ring">
-            <div class="profile-img-inner">
-              <img
-                src="assets/images/profile pic.png"
-                alt="Theja Reddy — Full Stack Developer"
-                class="profile-img"
-                loading="eager"
-              />
-            </div>
-            <div class="profile-badge">
-              <span class="availability-dot"></span>
-              Open to work
-            </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Technologies</span>
           </div>
         </div>
-
-      </div><!-- /hero-inner -->
+      </div>
+      <div class="hero-visual">
+        <div class="profile-frame">
+          <div class="profile-ring profile-ring-1"></div>
+          <div class="profile-ring profile-ring-2"></div>
+          <div class="profile-card">
+            <div class="profile-img-wrap">
+              <!-- Replace src with your actual image path: assets/images/profile.jpg -->
+              <img src="assets/images/profile.jpg" alt="B Theja Reddy" class="profile-img" id="profileImg" onerror="this.style.display='none'; document.getElementById('profileInitials').style.display='flex'"/>
+              <div class="profile-initials" id="profileInitials">BTR</div>
+            </div>
+            <div class="profile-info-card">
+              <span class="profile-name-sm">B Theja Reddy</span>
+              <span class="profile-loc">📍 Andhra Pradesh, India</span>
+            </div>
+          </div>
+          <div class="floating-badge fb-python">
+            <span>🐍</span> Python
+          </div>
+          <div class="floating-badge fb-ai">
+            <span>🤖</span> AI / LLM
+          </div>
+          <div class="floating-badge fb-api">
+            <span>⚡</span> FastAPI
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Scroll Indicator -->
-    <div class="hero-scroll" aria-hidden="true">
-      <span class="scroll-line"></span>
-      <span>scroll</span>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-
-  <!-- ══════════════════════════════════════════
-       ABOUT SECTION
-  ══════════════════════════════════════════ -->
-  <section id="about" class="section">
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about-section" id="about">
     <div class="container">
-
+      <div class="section-header">
+        <span class="section-eyebrow">Who I am</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
       <div class="about-grid">
-
-        <!-- Left: Text -->
-        <div class="about-text">
-          <div class="section-label reveal">About Me</div>
-          <h2 class="section-title reveal delay-1">Building Things<br/>That Actually Work</h2>
-
-          <div class="reveal delay-2">
-            <p>
-              I'm <strong>Theja Reddy</strong>, a B.Tech Computer Science graduate with a
-              diploma background, passionate about building full-stack web applications
-              that solve real problems. I'm a quick learner who picks up new technologies
-              through hands-on projects rather than tutorials alone.
-            </p>
-            <p>
-              My journey started with frontend basics and grew into backend development
-              with <strong>Python, Flask, and Django</strong> — leading to complete
-              client-ready applications like employee management systems and milk
-              management platforms.
-            </p>
-            <p>
-              I'm drawn to the intersection of <strong>AI and web development</strong>,
-              and I'm actively building skills in automation and intelligent systems.
-              Networking fundamentals give me a deeper understanding of how applications
-              behave in real-world environments.
-            </p>
-            <p>
-              I approach every project with a problem-solver's mindset — understanding
-              requirements first, then delivering clean, maintainable code that scales.
-            </p>
-          </div>
-
-          <!-- Stats -->
-          <div class="about-stats reveal delay-3">
-            <div class="stat-card">
-              <span class="stat-num" data-count="2" data-suffix="+">2+</span>
-              <span class="stat-label">Real Projects</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num" data-count="2" data-suffix="+">2+</span>
-              <span class="stat-label">Freelance Sites</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num" data-count="8" data-suffix="+">8+</span>
-              <span class="stat-label">Technologies</span>
-            </div>
+        <div class="about-text-block">
+          <p class="about-lead">
+            I'm a Computer Science graduate with hands-on experience building 
+            Python-powered backends, REST APIs, and AI-integrated systems that 
+            solve real-world problems.
+          </p>
+          <p class="about-body">
+            My work spans full-stack web applications with Flask and FastAPI, 
+            database design with MySQL, and AI-powered features using LangChain, 
+            RAG pipelines, embeddings, and prompt engineering. I care deeply about 
+            clean architecture, maintainable code, and building systems that actually scale.
+          </p>
+          <p class="about-body">
+            Currently exploring the intersection of backend engineering and AI — 
+            building smarter applications that leverage modern LLM capabilities 
+            while remaining production-grade and reliable.
+          </p>
+          <div class="about-links">
+            <a href="https://github.com/thejareddy" target="_blank" class="about-link">GitHub →</a>
+            <a href="https://linkedin.com/in/thejareddy" target="_blank" class="about-link">LinkedIn →</a>
           </div>
         </div>
-
-        <!-- Right: Image -->
-        <div class="about-image-side reveal-right">
-          <div class="about-profile-wrap">
-            <!-- Replace profile-placeholder.png with your actual profile picture later -->
-            <img
-              src="assets/images/profile pic.png"
-              alt="Theja Reddy"
-              class="about-profile-img"
-              loading="lazy"
-            />
-            <div class="about-profile-glow"></div>
-
-            <div class="about-tag-float tag-1">
-              <span>🐍 Python</span>
-            </div>
-            <div class="about-tag-float tag-2">
-              <span>⚡ Flask & Django</span>
-            </div>
+        <div class="about-cards">
+          <div class="about-card ac-python">
+            <div class="ac-icon">🐍</div>
+            <h4>Python & Backend</h4>
+            <p>Flask, FastAPI, Django, REST APIs, clean architecture</p>
+          </div>
+          <div class="about-card ac-ai">
+            <div class="ac-icon">🤖</div>
+            <h4>AI Engineering</h4>
+            <p>LangChain, RAG, embeddings, prompt engineering, LLM apps</p>
+          </div>
+          <div class="about-card ac-db">
+            <div class="ac-icon">🗄️</div>
+            <h4>Data & Systems</h4>
+            <p>MySQL, vector databases, session management, data modeling</p>
+          </div>
+          <div class="about-card ac-devops">
+            <div class="ac-icon">🐳</div>
+            <h4>DevOps & Tools</h4>
+            <p>Docker, Git, GitHub, VS Code, deployment basics</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-
-  <!-- ══════════════════════════════════════════
-       SKILLS SECTION
-  ══════════════════════════════════════════ -->
-  <section id="skills" class="section">
+  <!-- ===================== SKILLS ===================== -->
+  <section class="section skills-section" id="skills">
     <div class="container">
-
-      <div class="section-label reveal">Tech Stack</div>
-      <h2 class="section-title reveal delay-1">Skills &amp; Tools</h2>
-      <p class="section-sub reveal delay-2">
-        A curated set of technologies I work with — spanning frontend,
-        backend, databases, networking, and developer tooling.
-      </p>
-
-      <div class="skills-categories">
+      <div class="section-header">
+        <span class="section-eyebrow">What I work with</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+      <div class="skills-grid">
 
         <!-- Frontend -->
-        <div class="skills-group reveal delay-1">
-          <div class="skills-group-title">
-            <span class="group-icon">🎨</span> Frontend
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🎨</span>
+            <h3>Frontend</h3>
           </div>
-          <div class="skills-tags">
-            <span class="skill-item">HTML5</span>
-            <span class="skill-item">CSS3</span>
-            <span class="skill-item">JavaScript</span>
-            <span class="skill-item">Responsive Design</span>
-            <span class="skill-item">UI/UX Fundamentals</span>
-            <span class="skill-item">CSS Grid &amp; Flexbox</span>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
           </div>
         </div>
 
         <!-- Backend -->
-        <div class="skills-group reveal delay-2">
-          <div class="skills-group-title">
-            <span class="group-icon">⚙️</span> Backend
+        <div class="skill-category skill-cat-featured">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">⚙️</span>
+            <h3>Backend & APIs</h3>
           </div>
-          <div class="skills-tags">
-            <span class="skill-item">Python</span>
-            <span class="skill-item">Flask</span>
-            <span class="skill-item">Django</span>
-            <span class="skill-item">REST APIs</span>
-            <span class="skill-item">Jinja2</span>
-            <span class="skill-item">Authentication</span>
+          <div class="skill-tags">
+            <span class="skill-tag skill-primary">Python</span>
+            <span class="skill-tag skill-primary">Flask</span>
+            <span class="skill-tag skill-primary">FastAPI</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">REST APIs</span>
           </div>
         </div>
 
         <!-- Database -->
-        <div class="skills-group reveal delay-3">
-          <div class="skills-group-title">
-            <span class="group-icon">🗄️</span> Database
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🗄️</span>
+            <h3>Database</h3>
           </div>
-          <div class="skills-tags">
-            <span class="skill-item">MySQL</span>
-            <span class="skill-item">Schema Design</span>
-            <span class="skill-item">SQL Queries</span>
-            <span class="skill-item">Relational Data</span>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+
+        <!-- AI / LLM -->
+        <div class="skill-category skill-cat-featured">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🤖</span>
+            <h3>AI / LLM Systems</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-ai">LangChain</span>
+            <span class="skill-tag skill-ai">RAG</span>
+            <span class="skill-tag skill-ai">Embeddings</span>
+            <span class="skill-tag skill-ai">Prompt Engineering</span>
+            <span class="skill-tag skill-ai">Vector Databases</span>
+            <span class="skill-tag skill-ai">AI Chatbots</span>
+            <span class="skill-tag skill-ai">LLM App Concepts</span>
+          </div>
+        </div>
+
+        <!-- Cloud / DevOps -->
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">☁️</span>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS Basics</span>
+            <span class="skill-tag">Containerization</span>
+            <span class="skill-tag">Deployment Basics</span>
           </div>
         </div>
 
         <!-- Networking -->
-        <div class="skills-group reveal delay-4">
-          <div class="skills-group-title">
-            <span class="group-icon">🌐</span> Networking Knowledge
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🌐</span>
+            <h3>Networking</h3>
           </div>
-          <div class="skills-tags">
-            <span class="skill-item">HTTP/HTTPS</span>
-            <span class="skill-item">DNS</span>
-            <span class="skill-item">IP Addressing</span>
-            <span class="skill-item">Routing Basics</span>
-            <span class="skill-item">Client-Server Architecture</span>
+          <div class="skill-tags">
+            <span class="skill-tag">Computer Networks</span>
+            <span class="skill-tag">Networking Fundamentals</span>
           </div>
         </div>
 
-        <!-- Tools (full width) -->
-        <div class="skills-group reveal delay-5" style="grid-column: 1 / -1;">
-          <div class="skills-group-title">
-            <span class="group-icon">🛠️</span> Tools &amp; Environment
+        <!-- Tools -->
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🛠️</span>
+            <h3>Tools & Version Control</h3>
           </div>
-          <div class="skills-tags">
-            <span class="skill-item">Git</span>
-            <span class="skill-item">GitHub</span>
-            <span class="skill-item">VS Code</span>
-            <span class="skill-item">Terminal / CLI</span>
-            <span class="skill-item">Postman</span>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
           </div>
         </div>
 
@@ -375,325 +271,222 @@
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-
-  <!-- ══════════════════════════════════════════
-       PROJECTS SECTION
-  ══════════════════════════════════════════ -->
-  <section id="projects" class="section">
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="section experience-section" id="experience">
     <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Where I've worked</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="experience-timeline">
+        <!-- Add more experience blocks here as you grow -->
+        <div class="exp-card">
+          <div class="exp-left">
+            <div class="exp-company-badge">TS</div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">QA Intern</h3>
+                <span class="exp-company">Tecon Solutions</span>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-duration">Oct 2025 – May 2026</span>
+                <span class="exp-tag">Internship</span>
+              </div>
+            </div>
+            <p class="exp-project">Project: <strong>Salon Manager</strong></p>
+            <ul class="exp-list">
+              <li>Tested and validated Salon Manager features including appointment booking, billing, customer records, and service workflows</li>
+              <li>Created and executed test cases, maintained defect reports, and performed regression testing across core modules</li>
+              <li>Collaborated with developers to verify fixes, identify functional gaps, and improve overall workflow quality</li>
+              <li>Tested usability, workflow scenarios, and system reliability to ensure consistent performance across all modules</li>
+            </ul>
+            <div class="exp-skills">
+              <span class="exp-skill-tag">Software Testing</span>
+              <span class="exp-skill-tag">QA</span>
+              <span class="exp-skill-tag">Regression Testing</span>
+              <span class="exp-skill-tag">Defect Reporting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="section-label reveal">Built by Me</div>
-      <h2 class="section-title reveal delay-1">Projects</h2>
-      <p class="section-sub reveal delay-2">
-        Real-world applications built from scratch — covering full-stack
-        architecture, authentication, dashboards, and more.
-      </p>
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">What I've built</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Real-world applications spanning backend systems, AI integrations, and full-stack development</p>
+      </div>
 
+      <!-- Featured Project -->
+      <div class="project-featured" id="project-milk">
+        <div class="pf-content">
+          <div class="pf-badge">Featured Project</div>
+          <h3 class="pf-title">Milk Management System</h3>
+          <p class="pf-desc">
+            A full-stack web application to digitize and streamline milk collection operations —
+            handling supplier workflows, daily milk entries, payment tracking, role-based dashboards,
+            and reporting for admins, suppliers, and providers.
+          </p>
+          <div class="pf-highlights">
+            <div class="pf-highlight">
+              <span class="ph-icon">✓</span>
+              Role-based access control for admin, supplier, provider &amp; factory roles
+            </div>
+            <div class="pf-highlight">
+              <span class="ph-icon">✓</span>
+              Daily milk entry tracking with validation and history
+            </div>
+            <div class="pf-highlight">
+              <span class="ph-icon">✓</span>
+              Payment tracking, reporting dashboards &amp; profile management
+            </div>
+            <div class="pf-highlight">
+              <span class="ph-icon">✓</span>
+              Session-based auth, login/registration, and secure workflows
+            </div>
+          </div>
+          <div class="pf-tech">
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">HTML/CSS/JS</span>
+          </div>
+          <div class="pf-actions">
+            <a href="#" class="btn btn-primary btn-sm">View on GitHub</a>
+          </div>
+        </div>
+        <div class="pf-visual">
+          <div class="pf-mockup">
+            <div class="mockup-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-sidebar">
+                <div class="ms-item ms-active">Dashboard</div>
+                <div class="ms-item">Milk Entry</div>
+                <div class="ms-item">Suppliers</div>
+                <div class="ms-item">Payments</div>
+                <div class="ms-item">Reports</div>
+              </div>
+              <div class="mockup-main">
+                <div class="mm-stat-row">
+                  <div class="mm-stat"><div class="mm-num">₹42k</div><div class="mm-lbl">Revenue</div></div>
+                  <div class="mm-stat"><div class="mm-num">128</div><div class="mm-lbl">Entries</div></div>
+                  <div class="mm-stat"><div class="mm-num">34</div><div class="mm-lbl">Suppliers</div></div>
+                </div>
+                <div class="mm-chart">
+                  <div class="mm-bar" style="height:60%"></div>
+                  <div class="mm-bar" style="height:80%"></div>
+                  <div class="mm-bar" style="height:45%"></div>
+                  <div class="mm-bar" style="height:90%"></div>
+                  <div class="mm-bar" style="height:70%"></div>
+                  <div class="mm-bar" style="height:55%"></div>
+                  <div class="mm-bar" style="height:85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
       <div class="projects-grid">
 
-        <!-- Project 1: Milk Management System -->
-        <div class="project-card reveal delay-1">
-          <div class="project-img-wrap">
-            <!-- Replace Milk Management screenshot later -->
-            <img
-              src="assets/images/milk-management-placeholder.png"
-              alt="Milk Management System — Project Screenshot"
-              class="project-img"
-              loading="lazy"
-            />
-            <div class="project-img-overlay"></div>
-            <div class="project-img-label">Full Stack App</div>
+        <!-- AI Career Assistant -->
+        <div class="project-card" id="project-ai-career">
+          <div class="pc-glow"></div>
+          <div class="pc-header">
+            <div class="pc-icon">🤖</div>
+            <div class="pc-badge pc-badge-ai">AI Powered</div>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">Milk Management System</h3>
-            <p class="project-desc">
-              A real-world application built for managing milk providers,
-              tracking daily records, handling billing, and authenticating
-              users — covering the full stack from database to UI.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Flask</span>
-              <span class="tag">Python</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">HTML/CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <ul class="project-features">
-              <li>Provider registration &amp; management</li>
-              <li>Daily milk record tracking</li>
-              <li>Billing &amp; invoice generation</li>
-              <li>Role-based authentication</li>
-              <li>Admin dashboard with analytics</li>
-              <li>Responsive mobile-friendly UI</li>
-            </ul>
-            <a href="https://github.com/thejareddy123" target="_blank"
-               rel="noopener" class="btn btn-ghost" style="width:100%;justify-content:center;">
-              View on GitHub →
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 2: Timesheet Application -->
-        <div class="project-card reveal delay-2">
-          <div class="project-img-wrap">
-            <!-- Replace Timesheet Application screenshot later -->
-            <img
-              src="assets/images/timesheet-placeholder.png"
-              alt="Timesheet Application — Project Screenshot"
-              class="project-img"
-              loading="lazy"
-            />
-            <div class="project-img-overlay"></div>
-            <div class="project-img-label">Frontend App</div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Timesheet Application</h3>
-            <p class="project-desc">
-              A productivity-focused employee work tracking application
-              for managing daily tasks, logging work hours, and maintaining
-              a clean visual dashboard for workflow management.
-            </p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <ul class="project-features">
-              <li>Daily task &amp; work log tracking</li>
-              <li>Time entry management system</li>
-              <li>Clean dashboard interface</li>
-              <li>Leave request workflows</li>
-              <li>Responsive cross-device UI</li>
-              <li>Work summary reports</li>
-            </ul>
-            <a href="https://github.com/thejareddy123" target="_blank"
-               rel="noopener" class="btn btn-ghost" style="width:100%;justify-content:center;">
-              View on GitHub →
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-
-  <!-- ══════════════════════════════════════════
-       FREELANCING SECTION
-  ══════════════════════════════════════════ -->
-  <section id="freelancing" class="section">
-    <div class="container">
-
-      <div class="section-label reveal">Client Work</div>
-      <h2 class="section-title reveal delay-1">Freelancing</h2>
-      <p class="section-sub reveal delay-2">
-        Real client projects — contributing to live websites with
-        responsive UI improvements, layout enhancements, and frontend fixes.
-      </p>
-
-      <div class="freelance-grid">
-
-        <!-- Freelance 1: SpotPolicy -->
-        <div class="freelance-card reveal delay-1">
-          <div class="freelance-header">
-            <div>
-              <div class="freelance-name">SpotPolicy</div>
-              <div class="freelance-type">Motor Insurance Platform</div>
-            </div>
-            <div class="freelance-ext-btn">
-              <a href="https://www.spotpolicy.com/" target="_blank"
-                 rel="noopener noreferrer" class="btn btn-outline" style="padding:0.45rem 0.9rem;font-size:0.8rem;">
-                Live Site ↗
-              </a>
-            </div>
-          </div>
-          <p class="freelance-desc">
-            Worked on frontend improvements and responsive layouts for a
-            real motor insurance business website, delivering
-            user experience enhancements and UI refinements.
+          <h3 class="pc-title">AI Career Assistant</h3>
+          <p class="pc-desc">
+            An intelligent career guidance platform with personalized recommendations, 
+            skill assessments, resume analysis, and AI-powered roadmap generation using 
+            LangChain and RAG pipelines.
           </p>
-          <ul class="freelance-work">
-            <li>Multi-language switcher (English, Hindi, Telugu, Tamil, Kannada)</li>
-            <li>Responsive layout enhancements across all breakpoints</li>
-            <li>Auto-scrolling infinite carousel implementation</li>
-            <li>Frontend refactoring — monolithic to multi-file architecture</li>
-            <li>UI polish and user experience improvements</li>
+          <ul class="pc-highlights">
+            <li>LangChain + RAG + embeddings integration</li>
+            <li>Resume analysis &amp; skill-gap identification</li>
+            <li>Authentication, roadmap generation &amp; chat</li>
+            <li>Multi-session conversation with persistent history</li>
           </ul>
+          <div class="pc-tech">
+            <span class="tech-badge tech-sm">FastAPI</span>
+            <span class="tech-badge tech-sm">Python</span>
+            <span class="tech-badge tech-sm">LangChain</span>
+            <span class="tech-badge tech-sm">MySQL</span>
+            <span class="tech-badge tech-sm">JavaScript</span>
+          </div>
+          <div class="pc-footer">
+            <a href="#" class="pc-link">GitHub →</a>
+          </div>
         </div>
 
-        <!-- Freelance 2: SouthernFinTech -->
-        <div class="freelance-card reveal delay-2">
-          <div class="freelance-header">
-            <div>
-              <div class="freelance-name">SouthernFinTech</div>
-              <div class="freelance-type">Fintech Platform</div>
-            </div>
-            <div class="freelance-ext-btn">
-              <a href="https://southernfintech.com/" target="_blank"
-                 rel="noopener noreferrer" class="btn btn-outline" style="padding:0.45rem 0.9rem;font-size:0.8rem;">
-                Live Site ↗
-              </a>
-            </div>
+        <!-- Timesheet & Task Management -->
+        <div class="project-card" id="project-timesheet">
+          <div class="pc-glow"></div>
+          <div class="pc-header">
+            <div class="pc-icon">📋</div>
+            <div class="pc-badge pc-badge-backend">Backend</div>
           </div>
-          <p class="freelance-desc">
-            Contributed frontend support, responsive fixes, and layout
-            improvements for a fintech-related platform, enhancing the
-            overall website structure and UI consistency.
+          <h3 class="pc-title">Timesheet & Task Management</h3>
+          <p class="pc-desc">
+            A role-based employee management system for managing tasks, timesheets, 
+            leave requests, and workflow tracking — enhanced with an AI-powered 
+            employee assistant for internal queries.
           </p>
-          <ul class="freelance-work">
-            <li>Responsive design fixes across devices and screen sizes</li>
-            <li>Layout improvements and structural refinements</li>
-            <li>Frontend support for UI components</li>
-            <li>UI structure enhancements for consistency</li>
+          <ul class="pc-highlights">
+            <li>Role-based access &amp; auth system</li>
+            <li>Leave approval workflows &amp; employee tracking</li>
+            <li>AI-powered employee assistant via RAG</li>
+            <li>Reporting, validations &amp; profile management</li>
           </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-
-  <!-- ══════════════════════════════════════════
-       EDUCATION SECTION
-  ══════════════════════════════════════════ -->
-  <section id="education" class="section">
-    <div class="container">
-
-      <div class="section-label reveal">Background</div>
-      <h2 class="section-title reveal delay-1">Education</h2>
-      <p class="section-sub reveal delay-2">
-        A foundation built through formal education and
-        supplemented by real-world project experience.
-      </p>
-
-      <div class="timeline">
-
-        <!-- B.Tech -->
-        <div class="timeline-item reveal delay-1">
-          <div class="timeline-dot"></div>
-          <div class="timeline-body">
-            <div class="timeline-period">2021 — 2025</div>
-            <div class="timeline-degree">B.Tech — Computer Science Engineering</div>
-            <div class="timeline-inst">India · Full-time Undergraduate</div>
-            <div class="timeline-note">
-              Covered data structures, algorithms, databases, networking,
-              operating systems, and software engineering fundamentals.
-            </div>
+          <div class="pc-tech">
+            <span class="tech-badge tech-sm">FastAPI</span>
+            <span class="tech-badge tech-sm">Python</span>
+            <span class="tech-badge tech-sm">MySQL</span>
+            <span class="tech-badge tech-sm">JavaScript</span>
+          </div>
+          <div class="pc-footer">
+            <a href="#" class="pc-link">GitHub →</a>
           </div>
         </div>
 
-        <!-- Diploma -->
-        <div class="timeline-item reveal delay-2">
-          <div class="timeline-dot" style="background:var(--accent-cyan);box-shadow:0 0 12px rgba(78,205,196,0.5)"></div>
-          <div class="timeline-body">
-            <div class="timeline-period">2018 — 2021</div>
-            <div class="timeline-degree">Diploma — Computer Science</div>
-            <div class="timeline-inst">India · Polytechnic College</div>
-            <div class="timeline-note">
-              Technical foundation covering programming basics, computer
-              hardware, and core engineering concepts.
-            </div>
+        <!-- Dockerized Flask Task Manager -->
+        <div class="project-card" id="project-docker">
+          <div class="pc-glow"></div>
+          <div class="pc-header">
+            <div class="pc-icon">🐳</div>
+            <div class="pc-badge pc-badge-devops">DevOps</div>
           </div>
-        </div>
-
-        <!-- Self-Learning -->
-        <div class="timeline-item reveal delay-3">
-          <div class="timeline-dot" style="background:var(--accent-rose);box-shadow:0 0 12px rgba(240,98,146,0.5)"></div>
-          <div class="timeline-body">
-            <div class="timeline-period">2023 — Present</div>
-            <div class="timeline-degree">Full Stack Development — Self-Learning</div>
-            <div class="timeline-inst">Online Resources · Real-World Projects</div>
-            <div class="timeline-note">
-              Hands-on learning through building client projects — Flask
-              APIs, MySQL databases, responsive frontends, and exploring AI technologies.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-
-  <!-- ══════════════════════════════════════════
-       AI & FUTURE GOALS SECTION
-  ══════════════════════════════════════════ -->
-  <section id="ai-goals" class="section ai-section">
-    <div class="container">
-
-      <div class="ai-inner">
-
-        <!-- Goals Grid -->
-        <div>
-          <div class="section-label reveal">What's Next</div>
-          <h2 class="section-title reveal delay-1">AI &amp; Future<br/>Goals</h2>
-          <p class="section-sub reveal delay-2" style="margin-bottom:2.5rem;">
-            I'm actively expanding into Artificial Intelligence and modern
-            technologies to build smarter, more impactful software.
+          <h3 class="pc-title">Dockerized Flask Task Manager</h3>
+          <p class="pc-desc">
+            A containerized web application demonstrating Docker-based deployment, 
+            environment consistency, and portable application packaging with Flask 
+            and a lightweight database backend.
           </p>
-
-          <div class="ai-goals-grid">
-
-            <div class="ai-goal-card reveal delay-1">
-              <span class="ai-goal-icon">🤖</span>
-              <div class="ai-goal-title">AI Integration</div>
-              <div class="ai-goal-text">
-                Learning to integrate AI APIs and ML models into
-                real web applications.
-              </div>
-            </div>
-
-            <div class="ai-goal-card reveal delay-2">
-              <span class="ai-goal-icon">⚡</span>
-              <div class="ai-goal-title">Automation</div>
-              <div class="ai-goal-text">
-                Building automated workflows and backend
-                systems that reduce manual effort.
-              </div>
-            </div>
-
-            <div class="ai-goal-card reveal delay-3">
-              <span class="ai-goal-icon">📈</span>
-              <div class="ai-goal-title">Scalable Apps</div>
-              <div class="ai-goal-text">
-                Designing applications that handle real users
-                and real data at production scale.
-              </div>
-            </div>
-
-            <div class="ai-goal-card reveal delay-4">
-              <span class="ai-goal-icon">🌍</span>
-              <div class="ai-goal-title">Impactful Software</div>
-              <div class="ai-goal-text">
-                Contributing to projects that make a meaningful
-                difference for real people and businesses.
-              </div>
-            </div>
-
+          <ul class="pc-highlights">
+            <li>Full Docker containerization via Dockerfile</li>
+            <li>Simplified setup &amp; local execution</li>
+            <li>Environment-consistent deployment workflow</li>
+            <li>Clean Flask + database integration</li>
+          </ul>
+          <div class="pc-tech">
+            <span class="tech-badge tech-sm">Flask</span>
+            <span class="tech-badge tech-sm">Python</span>
+            <span class="tech-badge tech-sm">Docker</span>
+            <span class="tech-badge tech-sm">MySQL</span>
           </div>
-        </div>
-
-        <!-- Orbit Visual -->
-        <div class="ai-visual reveal-right">
-          <div class="ai-orbit">
-            <div class="ai-ring ai-ring-3">
-              <div class="ai-planet"></div>
-            </div>
-            <div class="ai-ring ai-ring-2">
-              <div class="ai-planet"></div>
-            </div>
-            <div class="ai-ring ai-ring-1">
-              <div class="ai-planet"></div>
-            </div>
-            <div class="ai-core">🧠</div>
+          <div class="pc-footer">
+            <a href="#" class="pc-link">GitHub →</a>
           </div>
         </div>
 
@@ -701,100 +494,215 @@
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-
-  <!-- ══════════════════════════════════════════
-       CONTACT SECTION
-  ══════════════════════════════════════════ -->
-  <section id="contact" class="section contact-section">
+  <!-- ===================== EDUCATION ===================== -->
+  <section class="section education-section" id="education">
     <div class="container">
-      <div class="contact-inner">
-
-        <div class="section-label reveal" style="justify-content:center;">Get in Touch</div>
-        <h2 class="section-title reveal delay-1" style="text-align:center;">
-          Let's Connect
-        </h2>
-        <p class="contact-intro reveal delay-2">
-          I'm open to full-time opportunities, freelance projects, and
-          collaborations. Reach out on LinkedIn or explore my work on GitHub.
-        </p>
-
-        <!-- Social Cards -->
-        <div class="contact-cards reveal delay-3">
-
-          <a href="https://www.linkedin.com/in/theja-reddy/" target="_blank"
-             rel="noopener noreferrer" class="contact-card">
-            <span class="contact-card-icon">💼</span>
-            <div class="contact-card-name">LinkedIn</div>
-            <div class="contact-card-handle">in/theja-reddy</div>
-          </a>
-
-          <a href="https://github.com/thejareddy123" target="_blank"
-             rel="noopener noreferrer" class="contact-card">
-            <span class="contact-card-icon">🐙</span>
-            <div class="contact-card-name">GitHub</div>
-            <div class="contact-card-handle">thejareddy123</div>
-          </a>
-
+      <div class="section-header">
+        <span class="section-eyebrow">Academic background</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="edu-grid">
+        <!-- Add more education entries here -->
+        <div class="edu-card edu-primary">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-content">
+            <div class="edu-degree">B.Tech – Computer Science & Engineering</div>
+            <div class="edu-school">M.J.R. College of Engineering & Technology</div>
+            <div class="edu-location">Piler, Andhra Pradesh</div>
+            <div class="edu-duration">Sep 2022 – Apr 2025</div>
+          </div>
         </div>
-
-        <!-- Resume Buttons -->
-        <!-- Replace resume.pdf with your actual resume later -->
-        <div class="contact-resume-row reveal delay-4">
-          <a href="assets/resume/B. Theja Reddy.pdf?v=2" target="_blank" rel="noopener"
-             class="btn btn-primary">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            View Resume
-          </a>
-          <a href="assets/resume/B. Theja Reddy.pdf" download="Theja_Reddy_Resume.pdf"
-             class="btn btn-ghost">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download CV
-          </a>
+        <div class="edu-card">
+          <div class="edu-icon">📐</div>
+          <div class="edu-content">
+            <div class="edu-degree">Diploma – Electronics & Communication Engineering</div>
+            <div class="edu-school">M.J.R. College of Engineering & Technology</div>
+            <div class="edu-location">Piler, Andhra Pradesh</div>
+            <div class="edu-duration">Jul 2019 – Mar 2022</div>
+          </div>
         </div>
-
       </div>
     </div>
   </section>
 
+  <!-- ===================== CERTIFICATIONS ===================== -->
+  <section class="section certs-section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Validated learning</span>
+        <h2 class="section-title">Certifications</h2>
+      </div>
+      <div class="certs-grid">
+        <!-- Add more certifications here -->
+        <div class="cert-card">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-content">
+            <h4 class="cert-name">Full Stack Python</h4>
+            <p class="cert-issuer">Skilldizer</p>
+            <span class="cert-date">Apr 2025</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🌐</div>
+          <div class="cert-content">
+            <h4 class="cert-name">Cisco Certificate on Networks</h4>
+            <p class="cert-issuer">Cisco</p>
+            <span class="cert-date">Apr 2022</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
+  <!-- ===================== RESUME ===================== -->
+  <section class="section resume-section" id="resume">
+    <div class="container">
+      <div class="resume-cta-card">
+        <div class="resume-cta-left">
+          <span class="resume-eyebrow">Ready to hire?</span>
+          <h2 class="resume-title">Download My Resume</h2>
+          <p class="resume-desc">
+            A concise summary of my skills, experience, projects, and education —
+            tailored for backend, Python, and AI engineering roles.
+          </p>
+          <div class="resume-highlights">
+            <span class="rh-item">✓ Python & Backend Development</span>
+            <span class="rh-item">✓ AI / LLM Engineering</span>
+            <span class="rh-item">✓ Full-Stack Project Experience</span>
+            <span class="rh-item">✓ QA & Testing Background</span>
+          </div>
+          <!-- Replace href with actual resume file path: assets/resume/resume.pdf -->
+          <a href="assets/resume/resume.pdf" download class="btn btn-primary">
+            Download Resume (PDF)
+          </a>
+        </div>
+        <div class="resume-cta-right">
+          <div class="resume-card-visual">
+            <div class="rcv-header">
+              <div class="rcv-avatar">BTR</div>
+              <div>
+                <div class="rcv-name">B Theja Reddy</div>
+                <div class="rcv-role">Python Developer · Backend Developer</div>
+              </div>
+            </div>
+            <div class="rcv-divider"></div>
+            <div class="rcv-section">
+              <div class="rcv-label">SKILLS</div>
+              <div class="rcv-tags">
+                <span>Python</span><span>Flask</span><span>FastAPI</span>
+                <span>MySQL</span><span>LangChain</span><span>Docker</span>
+              </div>
+            </div>
+            <div class="rcv-section">
+              <div class="rcv-label">EXPERIENCE</div>
+              <div class="rcv-exp">QA Intern · Tecon Solutions · 2025–26</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Let's connect</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Open to backend, Python, and AI engineering roles. Let's build something great.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <!-- Update these with your actual details -->
+          <a href="mailto:theja@example.com" class="contact-item">
+            <div class="ci-icon">✉️</div>
+            <div class="ci-content">
+              <span class="ci-label">Email</span>
+              <span class="ci-value">theja@example.com</span>
+            </div>
+          </a>
+          <a href="tel:+91XXXXXXXXXX" class="contact-item">
+            <div class="ci-icon">📱</div>
+            <div class="ci-content">
+              <span class="ci-label">Phone</span>
+              <span class="ci-value">+91 XXXXXXXXXX</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="ci-icon">📍</div>
+            <div class="ci-content">
+              <span class="ci-label">Location</span>
+              <span class="ci-value">Andhra Pradesh, India</span>
+            </div>
+          </div>
+          <a href="https://github.com/thejareddy" target="_blank" class="contact-item">
+            <div class="ci-icon">⌨️</div>
+            <div class="ci-content">
+              <span class="ci-label">GitHub</span>
+              <span class="ci-value">github.com/thejareddy</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/thejareddy" target="_blank" class="contact-item">
+            <div class="ci-icon">💼</div>
+            <div class="ci-content">
+              <span class="ci-label">LinkedIn</span>
+              <span class="ci-value">linkedin.com/in/thejareddy</span>
+            </div>
+          </a>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" onsubmit="handleContactForm(event)">
+            <div class="cf-row">
+              <div class="cf-field">
+                <label for="cf-name">Your Name</label>
+                <input type="text" id="cf-name" placeholder="John Smith" required />
+              </div>
+              <div class="cf-field">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" placeholder="john@company.com" required />
+              </div>
+            </div>
+            <div class="cf-field">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" placeholder="Regarding a backend role..." />
+            </div>
+            <div class="cf-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <div class="cf-note">
+              Or reach out directly at <a href="mailto:theja@example.com">theja@example.com</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-copy">
-          Designed &amp; built by <span>Theja Reddy</span> ·
-          © <span id="current-year">2025</span>
+        <div class="footer-left">
+          <span class="footer-logo">BTR<span class="logo-dot">.</span></span>
+          <p class="footer-tagline">Built with passion for backend development, AI-powered applications, and scalable software systems.</p>
         </div>
-        <div class="footer-mono">
-          theja<span style="color:var(--accent-primary)">.</span>dev
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+          <a href="#resume">Resume</a>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 B Theja Reddy. All rights reserved.</span>
+        <span class="footer-built">Designed & Built by B Theja Reddy</span>
       </div>
     </div>
   </footer>
 
-
-  <!-- ══════════════════════════════════════════
-       SCRIPTS
-  ══════════════════════════════════════════ -->
-  <script src="js/cursor-effects.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/main.js"></script>
-
-  <script>
-    // Reveal body after load
-    document.body.classList.add('loaded');
-
-    // Hamburger aria toggle
-    const ham = document.querySelector('.hamburger');
-    ham?.addEventListener('click', () => {
-      const expanded = ham.getAttribute('aria-expanded') === 'true';
-      ham.setAttribute('aria-expanded', String(!expanded));
-    });
-  </script>
-
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
